@@ -1,1 +1,1 @@
-# Codigos das atividades e que os professores possam.
+# Codigos das atividades e que os professores passam.
