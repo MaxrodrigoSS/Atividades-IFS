@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h2>Calculadora JavaScript</h2>
+    <label for="valorA">Valor A :</label>
+    <input type="text" id="valorA">
+    <br><br>
+    <label>Operações :</label>
+    <select name="opera" id="operacoes">
+        <option value="">Operações</option>
+        <option value="somar">+</option>
+        <option value="subtrair">-</option>
+        <option value="multiplicar">*</option>
+        <option value="dividir">/</option>
+    </select>
+    <br><br>
+    <label for="valorB">Valor B :</label>
+    <input type="text" id="valorB">
+    <br><br>
+    <label>Resultado :</label>
+    <input type="text" id="resultado">
+    <br><br>
+    <button onclick="calcularIf()">Calcular com IF</button>
+    <button onclick="calcularSwitch()">Calcular com Switch</button>
+    <script>
+        function calcularIf() {
+            var valor1 = document.getElementById("valorA").value;
+            var valor2 = document.getElementById("valorB").value;
+            var opera = document.getElementById("operacoes").value;
+            if (opera == "") {
+                alert("Selecione uma operação!")
+            } else if (opera == "somar") {
+                let res = parseInt(valor1) + parseInt(valor2);
+                document.getElementById("resultado").value = res;
+            } else if (opera == "subtrair") {
+                let res = parseInt(valor1) - parseInt(valor2);
+                document.getElementById("resultado").value = res;
+            } else if (opera == "multiplicar") {
+                let res = parseInt(valor1) * parseInt(valor2);
+                document.getElementById("resultado").value = res;
+            } else if (opera == 'dividir') {
+                let res = parseInt(valor1) / parseInt(valor2);
+                document.getElementById("resultado").value = res;
+            }
+        }
+
+        function calcularSwitch() {
+            var valor1 = document.getElementById("valorA").value;
+            var valor2 = document.getElementById("valorB").value;
+            var opera = document.getElementById("operacoes").value;
+            switch (opera) {
+                case "":
+                    return alert("Selecione uma operação!")
+                    break;
+                case "somar":
+                    let soma = parseInt(valor1) + parseInt(valor2);
+                    document.getElementById("resultado").value = soma;
+                    break;
+                case "subtrair":
+                    let subtrai = parseInt(valor1) - parseInt(valor2);
+                    document.getElementById("resultado").value = subtrai;
+                    break;
+                case "multiplicar":
+                    let multiplica = parseInt(valor1) * parseInt(valor2);
+                    document.getElementById("resultado").value = multiplica;
+                    break;
+                case "dividir":
+                    let dividi = parseInt(valor1) / parseInt(valor2);
+                    document.getElementById("resultado").value = dividi;
+                    break;
+            }
+        };
+    </script>
+
+</body>
+
+</html>
