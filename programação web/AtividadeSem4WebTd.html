@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+  <style>
+    h2 {
+      text-align: center;
+      margin: 10px;
+    }
+
+    label {
+      margin:8px;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Cadastro Aluno</h2>
+  <form action="processa_form.php" method="get">
+    <label for="nome">Nome :</label><br>
+    <input type="text" id="nome" name="nome" required>
+    <br><br>
+    <label for="cidade">Cidade :</label><br>
+    <input type="text" id="cidade" name="cidade" required>
+    <br><br>
+    <label for="senha">Senha :</label><br>
+    <input type="password" id="senha" name="senha" required><br>
+    <br><br>
+    <label for="genero">Sexo : </label><br>
+    <input type="radio" id="masculino" name="genero" value="Masculino">
+    <label for="masculino">Masculino</label><br>
+    <input type="radio" id="feminino" name="genero" value="Feminino">
+    <label for="feminino">Feminino</label><br>
+    <input type="radio" id="declarar" name="genero" value="ndeclarar">
+    <label for="ndeclarar">Não declarar</label>
+    <br><br>
+    <label for="telefone">Telefone :</label><br>
+    <input type="number" max="" id="telefone" name="telefone" required>
+    <br><br>
+    <label for="dnascimento">Data de Nascimento :</label><br>
+    <input type="date" id="dnascimento" name="dnascimento" required>
+    <br><br>
+    <label for="corfav">Cor Favorita :</label><br>
+    <input type="color" id="corfav" name="corfav" required>
+    <br><br>
+    <label for="email">Email :</label><br>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    <label for="foto">Foto :</label><br>
+    <input type="file" id="foto" required>
+    <br><br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Reset">
+  </form>
+
+</body>
+
+</html>
