@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separador de Palavras</title>
+</head>
+<body>
+    <div>
+        <h3>Desafio 1:</h3>
+        <label for="">Valor 1:</label><input type="text" id="valor1">
+        <label for="">Valor 2:</label><input type="text" id="valor2">
+        <label for="">Valor 3:</label><input type="text" id="valor3">
+        <label for="">Valor 4:</label><input type="text" id="valor4">
+        <label for="">Valor 5:</label><input type="text" id="valor5">
+        <br><br>
+        <button onclick="Desafio1()">Resolver</button>
+        <br><br>
+        <p id="resultadoDsf1" style="display:inline">
+    </div>
+    <hr>
+    <div>
+        <h3>Desafio 2:</h3>
+        <label for="">Quantidade</label><input type="text" id="quantidade">
+        <br><br>
+        <button onclick="calcularIf()">Resolver</button>
+        <br><br>
+        <p id="resultadoDsf2" style="display:inline">
+    </div>
+    <hr>
+    <div>
+        <h3>Desafio 3:</h3>
+        <label for="">Frase</label><input type="text" id="frase">
+        <br><br>
+        <button onclick="Desafio3()">Resolver</button>
+        <button onclick="Desafio3()">Resolver</button>
+        <br><br>
+        <p id="resultadoDsf3P" style="display:inline"></p>
+        <br><br>
+        <p id="resultadoDsf3L" style="display:inline"></p>
+    </div>
+    
+
+    <script>
+        function Desafio1(){
+            var resultDsf1 = document.getElementById("resultadoDsf1")
+            var desafio1 = [];
+            let valor1 = document.getElementById("valor1").value;
+            let valor2 = document.getElementById("valor2").value;
+            let valor3 = document.getElementById("valor3").value;
+            let valor4 = document.getElementById("valor4").value;
+            let valor5 = document.getElementById("valor5").value;
+            desafio1.push(valor1,valor2,valor3,valor4,valor5);
+            desafio1.sort();  
+            desafio1.reverse();           
+            resultDsf1.innerHTML = desafio1.join('-');
+        }
+        function Desafio2(){
+            var resultDsf2 = document.getElementById("resultadoDsf2");
+            let quantidade = document.getElementById("quantidade").value;
+            
+            var desafio2 = [];
+            
+        }
+        function Desafio3(){
+            var resultDsf3P = document.getElementById("resultadoDsf3P");
+            //var resultDsf3L = document.getElementById("resultadoDsf3L");
+            let palavra = "Max rodrigo"; 
+            
+            resultDsf3P.innerHTML = palavra.split("");
+            //resultDsf3L.innerHTML = palavra.lenght;
+        }
+    </script>
+</body>
+</html>
